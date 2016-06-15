@@ -37,4 +37,11 @@ replace: title
 title: the world's most famous mythical manager
 -
 
+postprocess - Postprocess ldif-files when using ldapsearch
+
+ldapsearch truncates the ldif-files at 78 characters and makes comparison with ldifdiff impossible.
+Postprocess.py reformats the ldif files for comparison.
+
+$ postprocess.py -i input_file.ldif
+> creates input_file.ldif.postprocessed that can be used with ldifdiff
 
